@@ -7,18 +7,18 @@ function simpleNumbersFinder(quantity) {
     if (quantity >= 1) {
         simpleNumbers.push(2)
     }
+    
+    for (currentNumber;simpleNumbers.length < quantity;currentNumber+=2) {
+        let checkArray = simpleNumbers.map(x => currentNumber % x)
 
-    while(simpleNumbers.length < quantity) {
-        if (
-            (currentNumber % simpleNumbers[0] != 0) && 
-            (currentNumber % simpleNumbers[1] != 0) && 
-            (currentNumber % simpleNumbers[2] != 0) && 
-            (currentNumber % simpleNumbers[3] != 0)) {
+        if (checkArray.includes(0)) {
+            continue
+        }
+        else {
             simpleNumbers.push(currentNumber)
         }
-        currentNumber += 2
     }
-    
+
     return simpleNumbers
 }
 
