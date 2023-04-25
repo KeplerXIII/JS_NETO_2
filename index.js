@@ -1,4 +1,4 @@
-function defaultFunction(quantity) {
+function simpleNumbersFinder(quantity) {
     
     let simpleNumbers = []
     let currentNumber = 3
@@ -22,4 +22,4 @@ function defaultFunction(quantity) {
     return simpleNumbers
 }
 
-console.log(defaultFunction(process.argv[2]))
+console.log(simpleNumbersFinder(process.argv[2]))
